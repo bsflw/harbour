@@ -1,0 +1,8 @@
+tree 76eb47225e6be44435bb6c76fae7fc3b650e7425
+parent 4053bceb0613fc89d1b364f73cc6cd8a0b2c7c7f
+author Connor Peet <connor@peet.io> 1588125350 -0700
+committer Connor Peet <connor@peet.io> 1588125350 -0700
+
+Update builtin extension ms-vscode.js-debug-nightly
+
+ - ms-vscode.js-debug-nightly -> 2020.4.2817 at 2020-04-29T00:06:04.157Z

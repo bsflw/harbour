@@ -1,0 +1,10 @@
+tree ed2d43ac4a603ba516b90a86116e67aa4a9b819b
+parent ca7eb77378358f6950975314d53ab88258c4a8bd
+parent a899cac9743d7c623e360b65c2f66ace43a3ed9a
+author miruka <miruka@disroot.org> 1587487619 -0400
+committer GitHub <noreply@github.com> 1587487619 -0400
+
+Merge pull request #127 from mirukana/dataclasses
+
+Convert attrs classes to dataclasses
+
