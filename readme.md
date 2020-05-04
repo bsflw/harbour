@@ -1,3 +1,5 @@
+![Baseflow Harbour](docs/images/hero.png)
+
 # harbour
 
 Use Keybase to sign and verify your Git commits. Currently, harbour has only
