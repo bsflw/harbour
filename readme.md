@@ -2,15 +2,15 @@
 
 # harbour
 
-Use Keybase to sign and verify your Git commits. Currently, harbour has only
-been tested on Linux and Windows but macOS support is coming soon.
+Use Keybase to sign and verify your Git commits. Harbour has been tested on
+Linux (using WSL), Windows, and macOS.
 
 ![Screenshot showing Keybase has verified a commit signature.](docs/images/harbour-rendered.png)
 
 ## Getting started
 
-The instructions are much the same for Windows and Linux, just replace the
-executable "harbour" with "harbour.exe".
+The instructions are much the same for Windows, Linux and macOS, just replace
+the executable "harbour" with "harbour.exe" for Windows.
 
 Store harbour in a safe place. Personally, I'm using
 `/home/phil/.local/bin/harbour`.
@@ -57,7 +57,7 @@ keys) and can still verify signatures from your existing GnuPG2 keychain.
 
 ### How do I keep using my GnuPG2 keys to verify signatures?
 
-Set HARBOUR_USE_GNUPG2 as an environment variable in your shell where you use
+Set `HARBOUR_USE_GNUPG2` as an environment variable in your shell where you use
 `git`. The value doesn't matter. Then, whenever Git wants to verify a
 signature, Harbour will first try to verify with Keybase and, if a signature
 can't be verified, will try again with GnuPG2. Signatures messages from
@@ -78,7 +78,7 @@ HARBOUR_USE_GNUPG2=sure git log --show-signature
 export HARBOUR_USE_GNUPG2=please
 ```
 
-### What are the downsides of using Keybase to sign my PGP keys?
+### What are the downsides of using Keybase to sign my Git commits?
 
 As far as I can tell, Keybase doesn't support storing subkeys, so you can't
 make an offline master key and create regularly-expiring subkeys for signing
