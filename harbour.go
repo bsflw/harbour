@@ -191,8 +191,14 @@ func verify(args []string) VerifyResult {
 		io.WriteString(os.Stdout, "\n[GNUPG:] GOODSIG \n")
 		// Prepend Keybase's messsage with a label
 		io.WriteString(os.Stderr, "Keybase: ")
+
+		// Make the output prettier by adding a newline after
+		// "Signature verified."
+		output := strings.Split(errString, "Signature verified. ")[1]
+
 		// Ouput the verification message to git
-		io.WriteString(os.Stderr, errString)
+		io.WriteString(os.Stderr, "Signature verified.\n")
+		io.WriteString(os.Stderr, output)
 	}
 
 	return VerifyResult{returnCode: procVerify.ProcessState.ExitCode()}

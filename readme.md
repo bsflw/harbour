@@ -1,7 +1,9 @@
 # harbour
 
 Use Keybase to sign and verify your Git commits. Currently, harbour has only
-been tested on Linux and Windows but macOS supports is coming soon.
+been tested on Linux and Windows but macOS support is coming soon.
+
+![Screenshot showing Keybase has verified a commit signature.](docs/images/harbour-rendered.png)
 
 ## Getting started
 
@@ -30,7 +32,7 @@ Set the following in your `$HOME/.gitconfig`:
 
 ```git
 [gpg]
-    program = <PATH-TO-EXECUTABLE>
+    program = <FULL-PATH-TO-EXECUTABLE>
 [commit]
     gpgsign = true
 [user]
@@ -54,14 +56,15 @@ keys) and can still verify signatures from your existing GnuPG2 keychain.
 ### How do I keep using my GnuPG2 keys to verify signatures?
 
 Set HARBOUR_USE_GNUPG2 as an environment variable in your shell where you use
-`git`. Then, whenever Git wants to verify a signature, Harbour will first try
-to verify with Keybase and, if a signature can't be verified, will try again
-with GnuPG2 
+`git`. The value doesn't matter. Then, whenever Git wants to verify a
+signature, Harbour will first try to verify with Keybase and, if a signature
+can't be verified, will try again with GnuPG2. Signatures messages from
+Keybase start with "Keybase: " and those from GnuPG start with "gpg: ".
 
 #### One-time
 
 ```sh
-HARBOUR_USE_GNUPG2=True git log --show-signature
+HARBOUR_USE_GNUPG2=sure git log --show-signature
 ```
 
 #### In your RC files
@@ -70,7 +73,7 @@ HARBOUR_USE_GNUPG2=True git log --show-signature
 # $HOME/.bashrc
 # or $HOME/.zshrc
 # ... or anywhere else :)
-export HARBOUR_USE_GNUPG2=True
+export HARBOUR_USE_GNUPG2=please
 ```
 
 ### What are the downsides of using Keybase to sign my PGP keys?
