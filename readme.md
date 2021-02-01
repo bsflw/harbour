@@ -7,6 +7,10 @@ Linux (using WSL), Windows, and macOS.
 
 ![Screenshot showing Keybase has verified a commit signature.](docs/images/harbour-rendered.png)
 
+## Archived
+
+This project was archived in early May of 2020, after [Keybase was purchased by Zoom](https://www.cnbc.com/2020/05/07/zoom-buys-keybase-in-first-deal-as-part-of-plan-to-fix-security.html).
+
 ## Getting started
 
 The instructions are much the same for Windows, Linux and macOS, just replace
